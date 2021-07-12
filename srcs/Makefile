@@ -13,7 +13,8 @@ SRCS	= silent/chunk_sort_bside_plus_silent.c\
 		  sort/three_and_five_sort.c\
 		  operations.c\
 		  parsing.c\
-		  push_swap_utils.c		  
+		  push_swap_utils.c\
+		  checker_utils.c  
 
 OBJS	= ${SRCS:.c=.o}
 

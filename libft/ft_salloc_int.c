@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_salloc_int.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbeco <gbeco@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/26 15:50:02 by gbeco             #+#    #+#             */
-/*   Updated: 2021/07/12 17:41:35 by gbeco            ###   ########.fr       */
+/*   Created: 2021/06/23 14:49:50 by gbeco             #+#    #+#             */
+/*   Updated: 2021/06/23 14:50:32 by gbeco            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char s, int fd)
+int	ft_salloc_int(int **s, int size)
 {
-	ft_putchar_fd(s, fd);
-	write(fd, "\n", 1);
+	*s = malloc(size);
+	if (s == NULL)
+		return (1);
+	return (0);
 }

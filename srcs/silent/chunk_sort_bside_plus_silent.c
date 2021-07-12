@@ -6,7 +6,7 @@
 /*   By: gbeco <gbeco@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/03 13:22:36 by gbeco             #+#    #+#             */
-/*   Updated: 2021/07/03 14:12:41 by gbeco            ###   ########.fr       */
+/*   Updated: 2021/07/12 18:08:13 by gbeco            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ void	chunk_sort_bside_plus_silent(t_stack *a, int nbr_chunk, int *step)
 	chunk = a->size / nbr_chunk;
 	i = 0;
 	j = (int)floor(nbr_chunk / 2);
-	k = (int)ceil(nbr_chunk / 2);
-	if (j == k)
-		k++;
+	k = j + 1;
 	while (a->size != 0)
 	{
 		put_good_one_high_and_push_bside_silent(a, j * chunk, k * chunk, step);

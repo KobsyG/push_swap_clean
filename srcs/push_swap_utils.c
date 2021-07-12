@@ -6,7 +6,7 @@
 /*   By: gbeco <gbeco@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 14:53:06 by gbeco             #+#    #+#             */
-/*   Updated: 2021/07/03 11:32:15 by gbeco            ###   ########.fr       */
+/*   Updated: 2021/07/12 19:27:13 by gbeco            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,38 +51,6 @@ int	insert_elem_list(t_stack *stack, int n)
 	stack->size++;
 	return (0);
 }
-
-// int	check_sort(t_stack *a)
-// {
-// 	t_elem	*elem;
-// 	int		i;
-
-// 	elem = a->first;
-// 	i = 0;
-// 	while (++i < a->size)
-// 	{
-// 		if (elem->pos > elem->next->pos)
-// 			return (1);
-// 		elem = elem->next;
-// 	}
-// 	return (0);
-// }
-
-// void	print_stack(t_stack *stack, char c) //print stack
-// {
-// 	t_elem	*elem;
-// 	int		i;
-
-// 	i = -1;
-// 	elem = stack->first;
-// 	printf("------%c----\n", c);
-// 	while (++i < stack->size)
-// 	{
-// 		printf("%d pos -> %d\n", elem->n, elem->pos);
-// 		elem = elem->next;
-// 	}
-// 	printf("-----------\n");
-// }
 
 void	get_pos(t_stack *a)
 {

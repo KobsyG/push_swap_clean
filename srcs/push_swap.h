@@ -6,7 +6,7 @@
 /*   By: gbeco <gbeco@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 11:05:06 by gbeco             #+#    #+#             */
-/*   Updated: 2021/07/03 14:07:45 by gbeco            ###   ########.fr       */
+/*   Updated: 2021/07/12 19:30:42 by gbeco            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,9 +69,12 @@ void	chunk_sort_silent(t_stack *a, int nbr_chunk, int *step);
 void	chunk_sort_plus_silent(t_stack *a, int nbr_chunk, int *step);
 void	chunk_sort_bside_silent(t_stack *a, int nbr_chunk, int *step);
 void	chunk_sort_bside_plus_silent(t_stack *a, int nbr_chunk, int *step);
+void	count_sort(t_stack *a, t_step *step);
+void	count_sort_plus(t_stack *a, t_step *step);
+void	count_sort_bside(t_stack *a, t_step *step);
+void	count_sort_bside_plus(t_stack *a, t_step *step);
 
 //operations_silent
-
 void	swap_silent(t_stack *stack, int *step);
 void	push_silent(t_stack *a, t_stack *b, int *step);
 void	rotate_silent(t_stack *stack, int *step);
@@ -118,11 +121,20 @@ void	chunk_sort_plus(t_stack *a, int nbr_chunk);
 void	chunk_sort_bside(t_stack *a, int nbr_chunk);
 void	chunk_sort_bside_plus(t_stack *a, int nbr_chunk);
 void	check_faster(t_stack *a, t_step *step);
+void	check_all_sort(t_stack *a, t_step *step);
 
 //operations
 void	swap(t_stack *stack, char c);
 void	push(t_stack *a, t_stack *b, char c);
 void	rotate(t_stack *stack, char c);
 void	reverse_rotate(t_stack *stack, char c);
+
+//checker
+int		check_line(t_stack *a);
+void	check_tri(t_stack *a);
+int		check_swap(char *line, t_stack *a, t_stack *b);
+int		check_push(char *line, t_stack *a, t_stack *b);
+int		check_rotate(char *line, t_stack *a, t_stack *b);
+int		check_reverse_rotate(char *line, t_stack *a, t_stack *b);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: gbeco <gbeco@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 11:45:52 by gbeco             #+#    #+#             */
-/*   Updated: 2021/06/23 15:42:34 by gbeco            ###   ########.fr       */
+/*   Updated: 2021/07/12 19:18:31 by gbeco            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,9 +113,6 @@ int	check_reverse_rotate(char *line, t_stack *a, t_stack *b)
 int	main(int ac, char **av)
 {
 	t_stack	a;
-	// t_stack	b;
-	// char	*line;
-	// int		check;
 
 	if (ac == 1)
 		return (0);
@@ -125,26 +122,9 @@ int	main(int ac, char **av)
 		write(2, "Error\n", 6);
 		return (-1);
 	}
-	// init_stack(&b);
 	get_pos(&a);
 	if (check_line(&a) != 0)
 		return (-1);
-
-	// while (get_next_line(0, &line) != 0)
-	// {		
-	// 	check = 4;
-	// 	check = check + check_swap(line, &a, &b);
-	// 	check = check + check_push(line, &a, &b);
-	// 	check = check + check_rotate(line, &a, &b);
-	// 	check = check + check_reverse_rotate(line, &a, &b);
-	// 	if (check == 0)
-	// 	{
-	// 		write(2, "Error\n", 6);
-	// 		free_stack(&a);
-	// 		free_stack(&b);
-	// 		return (-1);
-	// 	}
-	// }
 	check_tri(&a);
 	free_stack(&a);
 	return (0);

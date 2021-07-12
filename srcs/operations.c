@@ -6,7 +6,7 @@
 /*   By: gbeco <gbeco@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 13:25:19 by gbeco             #+#    #+#             */
-/*   Updated: 2021/07/03 11:08:38 by gbeco            ###   ########.fr       */
+/*   Updated: 2021/07/12 17:47:00 by gbeco            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,7 @@ void	push(t_stack *a, t_stack *b, char c)
 		b->size++;
 	}
 	write(1, "p", 1);
-	write(1, &c, 1);
-	write(1, "\n", 1);
+	ft_putendl_fd(c, 1);
 }
 
 void	rotate(t_stack *stack, char c)

@@ -15,7 +15,7 @@ RM		= rm -f
 all:		${NAME}
 
 ${NAME}:	${OBJS}
-			${CC} ${CFLAGS} -o $@ $< ../libpush_swap.a
+			${CC} ${CFLAGS} -o $@ $< ../libpush_swap.a ../../libft/libft.a
 
 clean:
 			${RM} ${OBJS}

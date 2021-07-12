@@ -6,7 +6,7 @@
 /*   By: gbeco <gbeco@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/03 10:51:08 by gbeco             #+#    #+#             */
-/*   Updated: 2021/07/03 13:37:01 by gbeco            ###   ########.fr       */
+/*   Updated: 2021/07/12 19:29:23 by gbeco            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,4 +77,13 @@ void	check_faster(t_stack *a, t_step *step)
 		chunk_sort_bside(a, step->nbr_chunk_bside);
 	else if (n == 4)
 		chunk_sort_bside_plus(a, step->nbr_chunk_plus_bside);
+}
+
+void	check_all_sort(t_stack *a, t_step *step)
+{
+	count_sort(a, step);
+	count_sort_plus(a, step);
+	count_sort_bside(a, step);
+	count_sort_bside_plus(a, step);
+	check_faster(a, step);
 }

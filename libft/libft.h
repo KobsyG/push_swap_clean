@@ -6,7 +6,7 @@
 /*   By: gbeco <gbeco@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 15:10:06 by gbeco             #+#    #+#             */
-/*   Updated: 2021/06/02 14:02:40 by gbeco            ###   ########.fr       */
+/*   Updated: 2021/07/12 17:49:42 by gbeco            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void				*ft_memset(void *s, int c, size_t n);
 void				*ft_calloc(size_t count, size_t size);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
-void				ft_putendl_fd(char *s, int fd);
+void				ft_putendl_fd(char s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_lstadd_front(t_list **alst, t_list *new);
 void				ft_lstadd_back(t_list **alst, t_list *new);
@@ -41,6 +41,7 @@ void				ft_lstdelone(t_list *lst, void (*del)(void*));
 void				ft_lstclear(t_list **lst, void (*del)(void*));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 int					ft_salloc(char **s, int size);
+int					ft_salloc_int(int **s, int size);
 int					ft_talloc(char ***tab, int size);
 int					ft_atoi(const char *nptr);
 int					ft_isalnum(int c);

@@ -6,13 +6,13 @@
 /*   By: gbeco <gbeco@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 11:04:45 by gbeco             #+#    #+#             */
-/*   Updated: 2021/07/03 14:04:35 by gbeco            ###   ########.fr       */
+/*   Updated: 2021/07/12 19:37:44 by gbeco            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static void	count_sort(t_stack *a, t_step *step)
+void	count_sort(t_stack *a, t_step *step)
 {
 	t_stack	new;
 	int		i;
@@ -33,7 +33,7 @@ static void	count_sort(t_stack *a, t_step *step)
 	}
 }
 
-static void	count_sort_plus(t_stack *a, t_step *step)
+void	count_sort_plus(t_stack *a, t_step *step)
 {
 	t_stack	new;
 	int		i;
@@ -54,7 +54,7 @@ static void	count_sort_plus(t_stack *a, t_step *step)
 	}
 }
 
-static void	count_sort_bside(t_stack *a, t_step *step)
+void	count_sort_bside(t_stack *a, t_step *step)
 {
 	t_stack	new;
 	int		i;
@@ -75,7 +75,7 @@ static void	count_sort_bside(t_stack *a, t_step *step)
 	}
 }
 
-static void	count_sort_bside_plus(t_stack *a, t_step *step)
+void	count_sort_bside_plus(t_stack *a, t_step *step)
 {
 	t_stack	new;
 	int		i;
@@ -111,9 +111,16 @@ int	main(int ac, char **av)
 	}
 	init_step(&step);
 	get_pos(&a);
-	count_sort(&a, &step);
-	count_sort_plus(&a, &step);
-	count_sort_bside(&a, &step);
-	count_sort_bside_plus(&a, &step);
-	check_faster(&a, &step);
+	if (check_sort(&a) == 0)
+	{
+		free_stack(&a);
+		return (0);
+	}
+	if (a.size == 3)
+		three_sort(&a);
+	else if (a.size == 5)
+		five_sort(&a);
+	else
+		check_all_sort(&a, &step);
+	free_stack(&a);
 }
